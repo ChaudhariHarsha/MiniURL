@@ -1,0 +1,10 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  
+ ::ng-deep body {
+    display: block;
+    margin: 0px;
+    height: 100vh;
+    background: linear-gradient(to right, rgb(139, 6, 139), rgb(248, 2, 215));
+}
