@@ -18,9 +18,9 @@ Make sure you have the following installed on your system:
 
 ## Redis:
 - pull this image redis/redis-stack
-- run this image incontainer with default port 6379 and exposed to 8001
+- run this image in container with default port 6379 and exposed to 8001
 
-## Start Projecct:
+## Start projecct:
 
 
 **Client**:
