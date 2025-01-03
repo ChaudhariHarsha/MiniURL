@@ -1,8 +1,14 @@
 <div class="main-container">
     <div class="input-div">
         <mat-form-field>
-            <input matInput placeholder="Enter your Url" type="url">
-        </mat-form-field>
-          <button mat-flat-button>Short it</button>
-    </div>
+            <input matInput placeholder="Enter your Url" type="url" [(ngModel)]="inputUrl" (ngModelChange)="isValidUrl()">
+        </mat-form-field> 
+        <div class="error" *ngIf="showError">* Invalid Website Url</div>
+          <button mat-flat-button (click)="onClick()">Short it !</button>
+        <div class="share-link" *ngIf="shareAbleLink">
+            <a (click)="onClickLink()">{{shareAbleLink}}</a>
+            <mat-icon (click)="copyUrl()">content_copy</mat-icon>   
+        </div>
+        <span *ngIf="copySuccess" class="success-message" >URL Copied!</span>
+    </div>  
 </div>

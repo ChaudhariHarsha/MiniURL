@@ -33,8 +33,7 @@ export class UrlShortenerService {
         this.redisService.set(encodedUrl, JSON.stringify(newUrl));
         return encodedUrl;
       } else {
-        existingUrl.count += 1;
-        existingUrl.save();
+        this.updateHitCount(existingUrl)
         this.redisService.set(
           existingUrl.shortenUrl,
           JSON.stringify(existingUrl),

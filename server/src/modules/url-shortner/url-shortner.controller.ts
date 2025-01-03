@@ -9,8 +9,9 @@ export class UrlShortenerController {
   constructor(private readonly urlShortenerService: UrlShortenerService) {}
 
   @Post('create')
-  async getShortenUrl(@Body() body:CreateUrlDto): Promise<string>{
-    return await this.urlShortenerService.shortenUrl(body.originalUrl,body.userId)
+  async getShortenUrl(@Body() body:CreateUrlDto): Promise<any>{
+    const url =  await this.urlShortenerService.shortenUrl(body.originalUrl,body.userId)
+    return {url:url};
   }
 
   @Throttle({default:{limit:4,ttl:1000}})

@@ -6,5 +6,17 @@
     display: block;
     margin: 0px;
     height: 100vh;
-    background: linear-gradient(to right, rgb(139, 6, 139), rgb(248, 2, 215));
+    background: linear-gradient(to right, rgb(60, 0, 83), rgb(208, 6, 226));
+}
+::ng-deep .mat-toolbar-single-row{
+  background-color: black;
+  color: white;
+}
+
+.active{
+  text-decoration: underline;
+}
+
+.tab{
+  cursor: pointer;
 }

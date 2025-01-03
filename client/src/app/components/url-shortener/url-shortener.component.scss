@@ -9,16 +9,46 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        .share-link{
+            display: flex;
+            gap: 12px;
+            color: white;
+            a{
+                color: white;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+        .error{
+            color:white
+        }
         mat-form-field{
             width:500px;
         }
         ::ng-deep .mdc-text-field{
             border-radius: 25px;
         }
+        ::ng-deep{
+            .mdc-button__label{
+                color: white;
+            }
+            .mdc-button{
+                background-color: black;
+            }
+            .mdc-text-field{
+                border: 2px solid black;
+            }
+        } 
     }
 
 }
 ::ng-deep .mat-toolbar-single-row{
     background-color: black;
     color: white;
-}
+  }
+
+  .success-message {
+    color: green;
+    background-color: black;
+    margin-left: 8px;
+  }

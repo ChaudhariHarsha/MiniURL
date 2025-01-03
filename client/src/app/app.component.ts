@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'client';
+  isActiveTab='home';
+
+  constructor(private route:Router){}
+
+  tabClick(url=''){
+    this.isActiveTab= url ? 'analytics': 'home'
+    if(this.isActiveTab==='home'){
+      this.route.navigate(['/mini-url'])
+    }else{
+      this.route.navigate(['/analytics'])
+    }
+  }
 }

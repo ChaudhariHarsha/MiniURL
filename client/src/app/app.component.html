@@ -4,6 +4,11 @@
   </button>
   <span>Mini Url</span>
   <span class="example-spacer"></span>
+  <span class="tab" [ngClass]="{'active': isActiveTab==='home'}" (click)="tabClick('')">Home</span>
+  <span>&nbsp;|&nbsp;</span>
+  <span class="tab" [ngClass]="{'active': isActiveTab==='analytics'}" (click)="tabClick('analytics')">Analytics</span>
+
 </mat-toolbar>
 
 <router-outlet />
+
