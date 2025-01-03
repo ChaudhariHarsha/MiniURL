@@ -21,9 +21,13 @@ Make sure you have the following installed on your system:
 - run this image incontainer with default port 6379 and exposed to 8001
 
 ## Start Projecct:
+
+
 **Client**:
 - cd client
 - npm run start
+
+
 **Server**:
 - cd server
 - npm run start
